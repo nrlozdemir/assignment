@@ -1,0 +1,2 @@
+export const ADD_OBJECTIVE = 'ADD_OBJECTIVE';
+export const REMOVE_OBJECTIVE = 'REMOVE_OBJECTIVE';
