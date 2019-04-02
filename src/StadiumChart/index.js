@@ -15,71 +15,24 @@ let stats = [
 
 const StadiumChart = () => (
 	<div className="d-flex justify-space-between align-items-center">
-		<div className="stadiumCharts" data-title="Total Percentage">
-      
-      <div className="stadiumChart" data={60}>
-        <div className="tick" style={{left: (lineSize * 0) + 130}}>
-          {[100 - 50, '% Slowest'].join('')}
-        </div>
-				<svg xmlns="http://www.w3.org/2000/svg">
-          <rect className="bar" fill="none" 
-            rx={(lineSize * (0 + 2))}
-            x={152}
-            y={(lineSize / 2)}
-            width={528-240} 
-            height={minHeight + (lineSize * (0 * 2))}
-            strokeDasharray="300%"
-            strokeDashoffset="300%" 
+		<svg width="800" height="800" xmlns="http://www.w3.org/2000/svg">
+      <g>
+        <g id="two">
+          <rect 
+          className="bar bar2"
+              fill="none"
+              rx="120" x="152" y="20" width="368" height="240"
           />
-				</svg>
-			</div>
-
-      <div className="stadiumChart" data={80}>
-        <div className="tick" style={{left: (lineSize * 1) + 130}}>
-          {[100 - 60, '% Slowest'].join('')}
-        </div>
-				<svg xmlns="http://www.w3.org/2000/svg">
-          <rect className="bar" fill="none" 
-            rx={(lineSize * (1 + 2))}
-            x={152}
-            y={(lineSize / 2)}
-            width={528-160} 
-            height={minHeight + (lineSize * (1 * 2))} 
+        </g>
+        <g id="one">
+          <rect 
+          className="bar bar1"
+              fill="none"
+              rx="80" x="152" y="20" width="288" height="160"
           />
-				</svg>
-			</div>
-
-      <div className="stadiumChart" data={70}>
-        <div className="tick" style={{left: (lineSize * 2) + 130}}>
-          {[100 - 70, '% Slowest'].join('')}
-        </div>
-				<svg xmlns="http://www.w3.org/2000/svg">
-          <rect className="bar" fill="none" 
-            rx={(lineSize * (2 + 2))}
-            x={152}
-            y={(lineSize / 2)}
-            width={528-80} 
-            height={minHeight + (lineSize * (2 * 2))} 
-          />
-				</svg>
-			</div>
-
-      <div className="stadiumChart" data={80}>
-        <div className="tick" style={{left: (lineSize * 3) + 130}}>
-          {[100 - 80, '% Slowest'].join('')}
-        </div>
-				<svg xmlns="http://www.w3.org/2000/svg">
-          <rect className="bar" fill="none" 
-            rx={(lineSize * (3 + 2))}
-            x={152}
-            y={(lineSize / 2)}
-            width={528}
-            height={minHeight + (lineSize * (3 * 2))} 
-          />
-				</svg>
-			</div>
-
-		</div>
+        </g>
+      </g>
+    </svg>
 	</div>
 )
 
